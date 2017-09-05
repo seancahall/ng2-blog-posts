@@ -28,6 +28,7 @@ export class PostsComponent implements OnInit, OnChanges {
 
   groupPosts: GroupPosts[];
 
+  // sufficient for a read-only blog listing
   ngOnInit() {
     this.groupPosts = this.groupByCategory(this.data);
   }
@@ -38,7 +39,7 @@ export class PostsComponent implements OnInit, OnChanges {
     // group posts by category
     if (!data) return;
 
-    // pull unique categories into an array
+    // Set object pulls unique categories into an iterable collection
     const categories = new Set(data.map(x => x.category));
 
     // transform into list of posts by category

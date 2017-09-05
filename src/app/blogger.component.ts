@@ -13,7 +13,7 @@ import "rxjs/add/operator/map";
     `
 })
 export class BloggerComponent implements OnInit {
-  blogger = "Raymond";
+  blogger = "North Parker";
   posts: Post[];
 
   constructor(private _http: Http) {}
